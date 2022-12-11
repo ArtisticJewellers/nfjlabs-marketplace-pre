@@ -45,7 +45,7 @@ const UploadComponent = () => {
       });
     }
   }, [active, account]);
-  useEffect(() => {});
+  useEffect(() => { });
   const handleSubmitNFT = async (value) => {
     if (!active) {
       WALLET_ALERT();
@@ -90,7 +90,6 @@ const UploadComponent = () => {
             ],
           })
             .then((data) => {
-              console.log("jkjdsfhgkjdhfkgjhkdjfhk");
               console.log(data);
               MINT_ALERT();
               // .then(() =>
@@ -349,7 +348,7 @@ const UploadComponent = () => {
                 <div className="text-center">
                   <div
                     className="text-center"
-                    // onClick={update}
+                  // onClick={update}
                   >
                     <div className="btn  btn-grad">Connect Wallet</div>
                   </div>
