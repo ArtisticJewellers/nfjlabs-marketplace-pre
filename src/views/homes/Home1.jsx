@@ -24,6 +24,7 @@ import { FollowUser } from "../../graphql/mutations";
 import { Link } from "react-router-dom";
 import { useWeb3React } from "@web3-react/core";
 import { ChainsInfo } from "../../config/config-chains";
+import Navbar from "../../components/header/Navbar/Navbar";
 
 const Marketplace = () => {
   const { data: banner_nft } = useQuery(BannerNft, {
@@ -31,7 +32,8 @@ const Marketplace = () => {
   });
   return (
     <div>
-      <Header />
+      <Navbar />
+      {/* <Header /> */}
       {/* //HeaderMarketplace Collection*/}
       <div>
         <>
@@ -227,7 +229,7 @@ const TrendingNfts = () => {
   const { data: trending_nft } = useQuery(TrendingNft, {
     variables: { popularCollection: "trending_nft" },
   });
-  console.log(trending_nft?.allTrendingNft);
+
   return (
     <>
       <div>

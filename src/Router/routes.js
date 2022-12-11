@@ -11,7 +11,6 @@ import Blog from "../views/pages/blog/Blog";
 import Article from "../views/pages/blog/Article";
 
 //  item inner pages
-
 import ItemDetails from "../views/pages/item/ItemDetails";
 import UploadType from "../views/pages/item/UploadType";
 

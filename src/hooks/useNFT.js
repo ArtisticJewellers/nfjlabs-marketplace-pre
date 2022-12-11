@@ -20,6 +20,7 @@ function useNFT(address) {
     },
   });
   console.log(getRole?.getRole?.royalty, getRole?.getRole?.royaltyAddress);
+
   const mintNFT = (metadata) => {
     console.log(getRole?.getRole?.royalty, getRole?.getRole?.royaltyAddress);
     return getErc721Contract(

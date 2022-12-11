@@ -92,6 +92,14 @@ const Header = () => {
             </div>
             {/* ==================  */}
             <div className="header__menu">
+              <div>
+                <SwitchNetwork
+                  url={
+                    icons[chainId]?.icon ||
+                    "https://static.vecteezy.com/system/resources/previews/005/556/550/non_2x/no-wireless-network-sign-symbol-icon-red-color-no-wifi-icon-free-vector.jpg"
+                  }
+                />
+              </div>
               <ul className="d-flex space-x-20" style={{ marginBottom: "0" }}>
                 <li className="has_popup">
                   <Link

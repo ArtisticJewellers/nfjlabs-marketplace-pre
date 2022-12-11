@@ -23,6 +23,7 @@ import {
 import { useWalletValidation } from "../../../context/WalletValidationContext";
 import { useHistory } from "react-router-dom";
 import { GetAllNfts, UserDetails } from "../../../graphql/query";
+
 const UploadComponent = () => {
   const { mintNFT } = useNFT();
   const history = useHistory();
@@ -45,8 +46,9 @@ const UploadComponent = () => {
       });
     }
   }, [active, account]);
-  useEffect(() => {});
+
   const handleSubmitNFT = async (value) => {
+    console.log("handle submit called");
     if (!active) {
       WALLET_ALERT();
     } else {
@@ -60,13 +62,16 @@ const UploadComponent = () => {
 
       showLoading();
       let uri = await uploadOnIpfs(metadata);
+      console.log({ uri });
       let url = await downloadJSONOnIpfs(uri);
+      console.log({ url });
+      console.log({ account });
       mintNFT(uri)
         .send({
           from: account,
         })
         .then(async (res) => {
-          console.log(res);
+          console.log({ res });
           createNft({
             variables: {
               name: value.title.trim(),
@@ -107,7 +112,8 @@ const UploadComponent = () => {
               hideLoading();
             });
         })
-        .catch(() => {
+        .catch((error) => {
+          console.log(error);
           hideLoading();
         });
     }
