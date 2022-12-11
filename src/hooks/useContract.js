@@ -7,7 +7,6 @@ import {
 
 function useContract() {
   const { library } = useWeb3React();
-
   const useERC721 = (address) => {
     return getErc721Contract(address, library.provider);
   };
@@ -17,7 +16,6 @@ function useContract() {
   const useERC1155 = (address) => {
     return getErc1155Contract(address, library.provider);
   };
-
   return {
     useERC721,
     useERC720,

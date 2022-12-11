@@ -21,11 +21,11 @@ const icons = {
   },
   97: {
     icon: bnb,
-    name: "BNB",
+    name: "Binance",
   },
   5: {
     icon: eth,
-    name: "Eth",
+    name: "Ethereum",
   },
 };
 
@@ -108,10 +108,10 @@ const Header = () => {
                     style={{ fontWeight: "bold" }}
                     to="/live-auctions"
                   >
-                    Live Auctions
+                    Auctions
                   </Link>
                 </li>{" "}
-                <li className="has_popup">
+                {/* <li className="has_popup">
                   <a
                     className="color_black "
                     href="https://mv.ibentos.com/rnd/artGallary2022/"
@@ -120,7 +120,7 @@ const Header = () => {
                   >
                     Metaverse
                   </a>
-                </li>
+                </li> */}
                 {PagesMenu.map((val, i) => (
                   <li key={i}>
                     <Link
@@ -247,15 +247,19 @@ const Header = () => {
               )}
             </div>
 
-            <div className="d-flex" style={{ alignItems: "center", gap: 5 }}>
-              <div>
-                <SwitchNetwork
-                  url={
-                    icons[chainId]?.icon ||
-                    "https://static.vecteezy.com/system/resources/previews/005/556/550/non_2x/no-wireless-network-sign-symbol-icon-red-color-no-wifi-icon-free-vector.jpg"
-                  }
-                />
-              </div>
+            <div className="d-flex" style={{ alignItems: "center", gap: 15 }}>
+              {active ? (
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", cursor: "pointer", marginRight: "30px" }}>
+                  <SwitchNetwork
+                    url={
+                      icons[chainId]?.icon ||
+                      "https://static.vecteezy.com/system/resources/previews/005/556/550/non_2x/no-wireless-network-sign-symbol-icon-red-color-no-wifi-icon-free-vector.jpg"
+                    }
+                    networkName={icons[chainId]?.name || "Not Supported"}
+                  />
+                </div>
+              ) : ("")}
+
               <div className="header__btns">
                 {!active ? (
                   <div
@@ -295,9 +299,8 @@ const Header = () => {
               onClick={toggleClass}
             />
             <div
-              className={` header__mobile js-header-mobile  ${
-                isActive ? "visible" : null
-              } `}
+              className={` header__mobile js-header-mobile  ${isActive ? "visible" : null
+                } `}
             >
               <MobileMenu />
             </div>

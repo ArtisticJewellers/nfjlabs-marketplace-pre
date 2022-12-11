@@ -16,7 +16,6 @@ import {
 
 // Import Swiper styles
 import "swiper/css";
-import "../styles/home.css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { WALLET_ALERT } from "../../config/constant/alert";
@@ -49,15 +48,6 @@ const Marketplace = () => {
                         >
                           Collect <br></br>Non-Fungible<br></br> Jewellery 💎
                         </h1>
-                        <div class="wrapperArea">
-                          <div class="staticText">
-                            <h2>All</h2>
-                          </div>
-                          <ul class="dynamicText">
-                            <li><span>Jewellery</span></li>
-                            <li><span>Gems</span></li>
-                          </ul>
-                        </div>
                         <p className="hero__text txt">
                           Artistic Jewellers seeks to establish a bridge between
                           the jewellery industry and the NFT world.

@@ -191,6 +191,7 @@ const NftUpdate = gql`
     }
   }
 `;
+
 const FilterNfts = gql`
   query FilterNfts(
     $network: String

@@ -314,7 +314,6 @@ contract AJMarketplace is ReentrancyGuard {
             );
         }
     }
-
     // bidder can cancel thier bid and transfer NFT to them
     function bidCancelByUser(uint256 _nftId) external {
         uint8 auctionIndex = nftAuctionCount[_nftId]; // auction index for perticular NFT
