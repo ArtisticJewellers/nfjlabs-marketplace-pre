@@ -25,6 +25,7 @@ import { Link } from "react-router-dom";
 import { useWeb3React } from "@web3-react/core";
 import { ChainsInfo } from "../../config/config-chains";
 import Navbar from "../../components/header/Navbar/Navbar";
+import Typewriter from "typewriter-effect";
 
 const Marketplace = () => {
   const { data: banner_nft } = useQuery(BannerNft, {
@@ -44,11 +45,38 @@ const Marketplace = () => {
                   <div className="row align-items-center justify-content-center md:justify-content-between">
                     <div className="col-lg-6">
                       <div className="hero__left space-y-20">
+                        <div style={{ display: "flex" }}>
+                          <h1
+                            className="hero__title"
+                            style={{ fontWeight: "700", marginRight: "10px" }}
+                          >
+                            All
+                          </h1>
+                          <h1
+                            className="hero__title"
+                            style={{ fontWeight: "700" }}
+                          >
+                            <Typewriter
+                              options={{
+                                strings: ["Jewellery", "Gems"],
+                                autoStart: true,
+                                loop: true,
+                              }}
+                              // onInit={(typewriter) => {
+                              //   typewriter
+                              //     .typeString(["jewellery", "Gems"])
+                              //     .pauseFor(2500)
+                              //     .deleteAll()
+                              //     .start();
+                              // }}
+                            />
+                          </h1>
+                        </div>
                         <h1
                           className="hero__title"
-                          style={{ fontWeight: "700" }}
+                          style={{ fontWeight: "700", marginTop: "-22px" }}
                         >
-                          Collect <br></br>Non-Fungible<br></br> Jewellery 💎
+                          One Platform 💎
                         </h1>
                         <p className="hero__text txt">
                           Artistic Jewellers seeks to establish a bridge between
