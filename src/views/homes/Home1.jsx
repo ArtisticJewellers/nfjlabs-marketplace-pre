@@ -125,13 +125,15 @@ const Marketplace = () => {
                       style={{ height: "300px" }}
                     >
                       <Swiper
-                        slidesPerView={3}
+                        slidesPerView={2}
                         spaceBetween={30}
                         pagination={{
                           clickable: true,
                         }}
+                        autoplay={true}
                         modules={[Pagination]}
                         className="mySwiper"
+                        style={{ padding: "40px 0" }}
                       >
                         <SwiperSlide>
                           <div
@@ -139,25 +141,95 @@ const Marketplace = () => {
                             style={{
                               display: "flex",
                               justifyContent: "end",
+                              width: "100%",
+                              height: "100%"
                             }}
                           >
                             <img
-                              className="img-fluid "
+                              className="img-fluid"
                               id="img_js"
                               src={process.env.PUBLIC_URL + "/img/card.svg"}
                               alt="img"
-                              // width="400"
+                              style={{ height: "320px", width: "100%" }}
                             />
                           </div>
                         </SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
-                        <SwiperSlide>Slide 5</SwiperSlide>
-                        <SwiperSlide>Slide 6</SwiperSlide>
-                        <SwiperSlide>Slide 7</SwiperSlide>
-                        <SwiperSlide>Slide 8</SwiperSlide>
-                        <SwiperSlide>Slide 9</SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="col-lg-6 align-items-center"
+                            style={{
+                              display: "flex",
+                              justifyContent: "end",
+                              width: "100%",
+                              height: "100%"
+                            }}
+                          >
+                            <img
+                              className="img-fluid"
+                              id="img_js"
+                              src={process.env.PUBLIC_URL + "/img/card.svg"}
+                              alt="img"
+                              style={{ height: "320px", width: "100%" }}
+                            />
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="col-lg-6 align-items-center"
+                            style={{
+                              display: "flex",
+                              justifyContent: "end",
+                              width: "100%",
+                              height: "100%"
+                            }}
+                          >
+                            <img
+                              className="img-fluid"
+                              id="img_js"
+                              src={process.env.PUBLIC_URL + "/img/card.svg"}
+                              alt="img"
+                              style={{ height: "320px", width: "100%" }}
+                            />
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="col-lg-6 align-items-center"
+                            style={{
+                              display: "flex",
+                              justifyContent: "end",
+                              width: "100%",
+                              height: "100%"
+                            }}
+                          >
+                            <img
+                              className="img-fluid"
+                              id="img_js"
+                              src={process.env.PUBLIC_URL + "/img/card.svg"}
+                              alt="img"
+                              style={{ height: "320px", width: "100%" }}
+                            />
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="col-lg-6 align-items-center"
+                            style={{
+                              display: "flex",
+                              justifyContent: "end",
+                              width: "100%",
+                              height: "100%"
+                            }}
+                          >
+                            <img
+                              className="img-fluid"
+                              id="img_js"
+                              src={process.env.PUBLIC_URL + "/img/card.svg"}
+                              alt="img"
+                              style={{ height: "320px", width: "100%" }}
+                            />
+                          </div>
+                        </SwiperSlide>
                       </Swiper>
                     </div>
                   </div>
@@ -516,9 +588,8 @@ function NftCard({ val }) {
 
                 <div className="card_head">
                   <Link
-                    to={`/item/${val.network}/${
-                      ChainsInfo[val.chainId].NFT_ADDRESS
-                    }/${val.tokenId}`}
+                    to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
+                      }/${val.tokenId}`}
                   >
                     <img src={val.imageUrl} alt="nftimage" />
                   </Link>

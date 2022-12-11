@@ -17,7 +17,7 @@ function Footer() {
               <h2 style={{ color: "white", lineHeight: 1.4 }}>
                 Learn More About Non-Fungible
                 <br /> Jewellery & The
-                <br /> Artistic Jewellers!
+                <br /> NFJLabs!
               </h2>
             </div>
             <div
@@ -154,7 +154,7 @@ function Footer() {
             </div>
           </div>
           <p className="copyright text-center" style={{ color: "white" }}>
-            2022 © The Artistic Jewellers{" "}
+            2022 © NFJ Labs{" "}
           </p>
         </div>
       </footer>
