@@ -4,6 +4,10 @@ import { FreeMode, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./styles.css";
+
 import {
   BannerNft,
   FeatureNft,
@@ -61,13 +65,6 @@ const Marketplace = () => {
                                 autoStart: true,
                                 loop: true,
                               }}
-                            // onInit={(typewriter) => {
-                            //   typewriter
-                            //     .typeString(["jewellery", "Gems"])
-                            //     .pauseFor(2500)
-                            //     .deleteAll()
-                            //     .start();
-                            // }}
                             />
                           </h1>
                         </div>
@@ -81,7 +78,10 @@ const Marketplace = () => {
                           Artistic Jewellers seeks to establish a bridge between
                           the jewellery industry and the NFT world.
                         </p>
-                        <div className="space-x-20 d-flex flex-md-row sm:space-y-20" style={{ width: "100%", alignItems: "center" }}>
+                        <div
+                          className="space-x-20 d-flex flex-md-row sm:space-y-20"
+                          style={{ width: "100%", alignItems: "center" }}
+                        >
                           <a
                             className="btn btn-grad1 btn-border"
                             rel="noreferrer"
@@ -96,14 +96,6 @@ const Marketplace = () => {
                           >
                             Gems <i class="ri-arrow-right-s-line"></i>
                           </a>
-                          {/* <a
-                            className="btn btn-grad2 btn-border"
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://mv.ibentos.com/rnd/artGallary2022/"
-                          >
-                            Metaverse <i class="ri-arrow-right-s-line"></i>
-                          </a> */}
                         </div>
                         <div>
                           We accept:{" "}
@@ -130,19 +122,38 @@ const Marketplace = () => {
                     </div>
                     <div
                       className="col-lg-6 align-items-center"
-                      style={{
-                        display: "flex",
-                        justifyContent: "end",
-                        maxWidth: "500px",
-                      }}
+                      style={{ height: "300px" }}
                     >
-                      <img
+                      <Swiper
+                        direction="vertical"
+                        slidesPerView={4}
+                        centeredSlides={true}
+                        spaceBetween={30}
+                        grabCursor={true}
+                        autoplay={true}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                      >
+                        <SwiperSlide>Slide 1</SwiperSlide>
+                        <SwiperSlide>Slide 2</SwiperSlide>
+                        <SwiperSlide>Slide 3</SwiperSlide>
+                        <SwiperSlide>Slide 4</SwiperSlide>
+                        <SwiperSlide>Slide 5</SwiperSlide>
+                        <SwiperSlide>Slide 6</SwiperSlide>
+                        <SwiperSlide>Slide 7</SwiperSlide>
+                        <SwiperSlide>Slide 8</SwiperSlide>
+                        <SwiperSlide>Slide 9</SwiperSlide>
+                      </Swiper>
+                      {/* <img
                         className="img-fluid "
                         id="img_js"
                         src={process.env.PUBLIC_URL + "/img/card.svg"}
                         alt="img"
                         width="400"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
@@ -500,8 +511,9 @@ function NftCard({ val }) {
 
                 <div className="card_head">
                   <Link
-                    to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
-                      }/${val.tokenId}`}
+                    to={`/item/${val.network}/${
+                      ChainsInfo[val.chainId].NFT_ADDRESS
+                    }/${val.tokenId}`}
                   >
                     <img src={val.imageUrl} alt="nftimage" />
                   </Link>
