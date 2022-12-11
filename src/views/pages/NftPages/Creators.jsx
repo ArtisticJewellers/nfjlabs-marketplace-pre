@@ -5,7 +5,7 @@ import Header from "../../../components/header/Header";
 import useDocumentTitle from "../../../components/useDocumentTitle";
 
 const Creators = () => {
-  useDocumentTitle("NFJ Labs-Marketplace");
+  useDocumentTitle("NFJ Labs- Artists");
   return (
     <div>
       <Header />

@@ -6,7 +6,7 @@ import useDocumentTitle from "../../../components/useDocumentTitle";
 import MenuCategoriesMarket from "../elements/MenuCategoriesMarket";
 
 const Marketplace = () => {
-  useDocumentTitle("NFJ Labs-Marketplace");
+  useDocumentTitle("NFJ Labs - Marketplace");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -75,27 +75,49 @@ const Marketplace = () => {
                           One Platform 💎
                         </h1>
                         <p className="hero__text txt">
-                          Artistic Jewellers seeks to establish a bridge between
-                          the jewellery industry and the NFT world.
+                          NFJLabs seeks to establish a bridge between the
+                          jewellery industry and the NFT world.
                         </p>
                         <div
                           className="space-x-20 d-flex flex-md-row sm:space-y-20"
                           style={{ width: "100%", alignItems: "center" }}
                         >
-                          <a
+                          {/* <a
                             className="btn btn-grad1 btn-border"
                             rel="noreferrer"
                             href="explore"
                           >
                             Jewellery
-                          </a>
-                          <a
+                          </a> */}
+                          <Link
+                            to={"explore"}
+                            className="btn btn-grad1 btn-border"
+                            rel="noreferrer"
+                          >
+                            Jewellery
+                          </Link>
+                          {/* <a
                             className="btn btn-grad2 btn-border"
                             rel="noreferrer"
                             href="explore"
                           >
                             Gems <i class="ri-arrow-right-s-line"></i>
-                          </a>
+                          </a> */}
+                          <Link
+                            to={"explore"}
+                            className="btn btn-grad2 btn-border"
+                            rel="noreferrer"
+                          >
+                            Gems <i class="ri-arrow-right-s-line"></i>
+                          </Link>
+                          {/* <a
+                            className="btn btn-grad2 btn-border"
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://mv.ibentos.com/rnd/artGallary2022/"
+                          >
+                            Metaverse <i class="ri-arrow-right-s-line"></i>
+                          </a> */}
                         </div>
                         <div>
                           We accept:{" "}
@@ -170,7 +192,7 @@ const Marketplace = () => {
         >
           <div>
             <div className=" py-2 " style={{ margin: "0 30px" }}>
-              <h3 style={{ color: "#e20ef9" }}>Trending NFTs</h3>
+              <h3 style={{ color: "#8C52FF" }}>Trending NFTs</h3>
               <p style={{ color: "white", marginBottom: "16px" }}>
                 These are some of the most trending nfts on our NFJ marketplace.
               </p>
@@ -223,7 +245,7 @@ const Marketplace = () => {
         >
           <div>
             <div className="py-2 mb-2" style={{ margin: "0 30px" }}>
-              <h3 style={{ color: "#e20ef9" }}>Featured NFTs</h3>
+              <h3 style={{ color: "#8C52FF" }}>Featured NFTs</h3>
               <p style={{ color: "white" }}>
                 These are some of the most trending collections on our NFJ
                 marketplace.

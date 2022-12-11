@@ -6,7 +6,7 @@ import CardAuctions from "../../../components/cards/CardAuctions";
 import useDocumentTitle from "../../../components/useDocumentTitle";
 
 const LiveAuctions = () => {
-  useDocumentTitle("NFJ Labs-Marketplace");
+  useDocumentTitle("NFJ Labs- Auctions");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

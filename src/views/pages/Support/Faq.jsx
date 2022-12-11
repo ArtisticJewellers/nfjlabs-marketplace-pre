@@ -60,7 +60,7 @@ const FaqContent = [
 ];
 
 const Faq = () => {
-  useDocumentTitle('Faq');
+  useDocumentTitle('NFJ Labs - Faq');
   return (
     <div>
       <Header />

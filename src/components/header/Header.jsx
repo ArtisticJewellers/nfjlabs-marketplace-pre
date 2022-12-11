@@ -132,7 +132,7 @@ const Header = () => {
                     </Link>
                   </li>
                 ))}
-                <li className="has_popup2">
+                {/* <li className="has_popup2">
                   <Link
                     className="color_black hovered"
                     style={{ fontWeight: "bold" }}
@@ -146,7 +146,7 @@ const Header = () => {
                   >
                     <MegaMenu />
                   </ul>
-                </li>
+                </li> */}
               </ul>
             </div>
             {/* ================= */}
@@ -159,7 +159,7 @@ const Header = () => {
                 type="text"
                 placeholder="Search"
                 style={{
-                  border: "2px solid #E20EF9",
+                  border: "2px solid #8C52FF",
                   borderRadius: 0,
                   borderTopLeftRadius: ".375rem",
                   borderBottomLeftRadius: ".375rem",
@@ -249,7 +249,15 @@ const Header = () => {
 
             <div className="d-flex" style={{ alignItems: "center", gap: 15 }}>
               {active ? (
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", cursor: "pointer", marginRight: "30px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    marginRight: "30px",
+                  }}
+                >
                   <SwitchNetwork
                     url={
                       icons[chainId]?.icon ||
@@ -258,13 +266,15 @@ const Header = () => {
                     networkName={icons[chainId]?.name || "Not Supported"}
                   />
                 </div>
-              ) : ("")}
+              ) : (
+                ""
+              )}
 
               <div className="header__btns">
                 {!active ? (
                   <div
                     style={{
-                      border: "2px solid #E20EF9",
+                      border: "2px solid #8C52FF",
                       color: "#000",
                       borderRadius: "5px",
                       padding: "10px 15px",
@@ -276,10 +286,11 @@ const Header = () => {
                     Connect wallet
                   </div>
                 ) : (
+                  // E20EF9
                   <div
                     className=""
                     style={{
-                      border: "2px solid #E20EF9",
+                      border: "2px solid #8C52FF",
                       color: "#000",
                       borderRadius: "5px",
                       padding: "10px 15px",
@@ -294,6 +305,7 @@ const Header = () => {
               </div>
             </div>
 
+            {/* mobile menu  */}
             <div
               className="header__burger js-header-burger"
               onClick={toggleClass}
@@ -304,8 +316,9 @@ const Header = () => {
             >
               <MobileMenu />
             </div>
+
             {active ? (
-              <div>
+              <div className="mobileGayab">
                 <li className="has_popup2">
                   <Link
                     className="color_black is_new hovered"
