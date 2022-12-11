@@ -9,12 +9,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #A169D9;
+  background: #8C52FF;
   /* border-radius: 5px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8f53ca;
+  background: #8C52FF;
 }
 
 /* ===============================================
@@ -13183,13 +13183,19 @@ a.btn-outline.disabled:hover {
   width: 15rem;
 }
 
-.btn-grad {
+/* .btn-grad {
   color: #ffffff !important;
   border: none !important;
-  /* transition: all 0.4s ease-in-out !important; */
   transition: none !important;
   background: linear-gradient(45deg, #4B2BE9, #E70FD1, #F0F442) !important;
-  /* border:2px solid #E70FD1 !important; */
+} */
+
+.btn-grad {
+  color: #ffffff;
+  border: none !important;
+  transition: none !important;
+  ;
+  background: #8C52FF;
 }
 
 .btn-border {
@@ -13203,8 +13209,9 @@ a.btn-outline.disabled:hover {
   border: none !important;
   /* border: solid 2px #5691fe;   transition: all 0.4s ease-in-out !important;
        */
-  color: #000 !important;
-  border: 2px solid #e20ef9 !important;
+  color: #fff !important;
+  border: 2px solid #8C52FF !important;
+  /* border: 2px solid #e20ef9 !important; */
 }
 
 
@@ -21815,4 +21822,11 @@ select {
 
 .swiper-slide {
   width: 20rem !important;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .mobileGayab {
+    display: none;
+  }
 }

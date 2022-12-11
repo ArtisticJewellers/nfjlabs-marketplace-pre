@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  useDocumentTitle("NFJ Labs-Marketplace");
+  useDocumentTitle("NFJ Labs- Contact");
   return (
     <div>
       <Header />

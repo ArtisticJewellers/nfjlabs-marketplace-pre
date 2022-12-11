@@ -5,7 +5,7 @@ import HeroPrivacy from "../../../components/hero/HeroPrivacy";
 import useDocumentTitle from "../../../components/useDocumentTitle";
 
 const PrivacyPolicy = () => {
-  useDocumentTitle("Privacy Policy");
+  useDocumentTitle("NFJ Labs - Privacy Policy");
   return (
     <div>
       <Header />

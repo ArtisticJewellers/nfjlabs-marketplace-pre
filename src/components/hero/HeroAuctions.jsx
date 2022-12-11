@@ -14,9 +14,7 @@ const HeroAuctions = () => {
             />
             <h1 className="text-left">Live Auctions</h1>
             <p>
-              Sign up to receive our monthly newsletter, featuring updates from
-              the team, new decentralized applications and NFT projects, and
-              trends we’re seeing in the space.
+              Auction on your favourite jewellery items from famous artists and shining gems
             </p>
           </div>
         </div>

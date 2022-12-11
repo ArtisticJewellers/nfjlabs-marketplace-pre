@@ -13,6 +13,11 @@ const RightMenu = [
         title: "View Profile",
         link: "/user-profile",
     },
+    {
+        icon: "upload",
+        title: "Create NFT",
+        link: "/upload",
+    },
 ];
 
 function MegaProfile() {

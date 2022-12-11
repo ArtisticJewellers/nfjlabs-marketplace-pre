@@ -49,6 +49,8 @@ function MobileMenu() {
             Connect wallet
           </Link>
         </div>
+        <div>
+        </div>
       </div>
     </div>
   );
