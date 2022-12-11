@@ -82,13 +82,6 @@ const Marketplace = () => {
                           className="space-x-20 d-flex flex-md-row sm:space-y-20"
                           style={{ width: "100%", alignItems: "center" }}
                         >
-                          {/* <a
-                            className="btn btn-grad1 btn-border"
-                            rel="noreferrer"
-                            href="explore"
-                          >
-                            Jewellery
-                          </a> */}
                           <Link
                             to={"explore"}
                             className="btn btn-grad1 btn-border"
@@ -96,13 +89,6 @@ const Marketplace = () => {
                           >
                             Jewellery
                           </Link>
-                          {/* <a
-                            className="btn btn-grad2 btn-border"
-                            rel="noreferrer"
-                            href="explore"
-                          >
-                            Gems <i class="ri-arrow-right-s-line"></i>
-                          </a> */}
                           <Link
                             to={"explore"}
                             className="btn btn-grad2 btn-border"
@@ -110,14 +96,6 @@ const Marketplace = () => {
                           >
                             Gems <i class="ri-arrow-right-s-line"></i>
                           </Link>
-                          {/* <a
-                            className="btn btn-grad2 btn-border"
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://mv.ibentos.com/rnd/artGallary2022/"
-                          >
-                            Metaverse <i class="ri-arrow-right-s-line"></i>
-                          </a> */}
                         </div>
                         <div>
                           We accept:{" "}
@@ -147,19 +125,31 @@ const Marketplace = () => {
                       style={{ height: "300px" }}
                     >
                       <Swiper
-                        direction="vertical"
-                        slidesPerView={4}
-                        centeredSlides={true}
+                        slidesPerView={3}
                         spaceBetween={30}
-                        grabCursor={true}
-                        autoplay={true}
                         pagination={{
                           clickable: true,
                         }}
                         modules={[Pagination]}
                         className="mySwiper"
                       >
-                        <SwiperSlide>Slide 1</SwiperSlide>
+                        <SwiperSlide>
+                          <div
+                            className="col-lg-6 align-items-center"
+                            style={{
+                              display: "flex",
+                              justifyContent: "end",
+                            }}
+                          >
+                            <img
+                              className="img-fluid "
+                              id="img_js"
+                              src={process.env.PUBLIC_URL + "/img/card.svg"}
+                              alt="img"
+                              // width="400"
+                            />
+                          </div>
+                        </SwiperSlide>
                         <SwiperSlide>Slide 2</SwiperSlide>
                         <SwiperSlide>Slide 3</SwiperSlide>
                         <SwiperSlide>Slide 4</SwiperSlide>
@@ -169,13 +159,6 @@ const Marketplace = () => {
                         <SwiperSlide>Slide 8</SwiperSlide>
                         <SwiperSlide>Slide 9</SwiperSlide>
                       </Swiper>
-                      {/* <img
-                        className="img-fluid "
-                        id="img_js"
-                        src={process.env.PUBLIC_URL + "/img/card.svg"}
-                        alt="img"
-                        width="400"
-                      /> */}
                     </div>
                   </div>
                 </div>
