@@ -81,15 +81,29 @@ const Marketplace = () => {
                           Artistic Jewellers seeks to establish a bridge between
                           the jewellery industry and the NFT world.
                         </p>
-                        <div className="space-x-20 d-flex flex-column flex-md-row sm:space-y-20">
+                        <div className="space-x-20 d-flex flex-md-row sm:space-y-20" style={{ width: "100%", alignItems: "center" }}>
                           <a
-                            className="btn btn-grad btn-border"
+                            className="btn btn-grad1 btn-border"
+                            rel="noreferrer"
+                            href="explore"
+                          >
+                            Jewellery
+                          </a>
+                          <a
+                            className="btn btn-grad2 btn-border"
+                            rel="noreferrer"
+                            href="explore"
+                          >
+                            Gems <i class="ri-arrow-right-s-line"></i>
+                          </a>
+                          {/* <a
+                            className="btn btn-grad2 btn-border"
                             target="_blank"
                             rel="noreferrer"
-                            href="https://s3.amazonaws.com/nfjlabs.io/NFJ+Labs+Pitch-Deck+(1).pdf"
+                            href="https://mv.ibentos.com/rnd/artGallary2022/"
                           >
-                            Download Pitch-Deck
-                          </a>
+                            Metaverse <i class="ri-arrow-right-s-line"></i>
+                          </a> */}
                         </div>
                         <div>
                           We accept:{" "}

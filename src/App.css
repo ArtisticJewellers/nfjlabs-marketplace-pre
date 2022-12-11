@@ -13207,6 +13207,42 @@ a.btn-outline.disabled:hover {
   border: 2px solid #e20ef9 !important;
 }
 
+
+.btn-grad1 {
+  display: flex;
+  color: #ffffff;
+  border: none !important;
+  transition: none !important;
+  background: #8C52FF;
+  align-items: center;
+  height: 50px;
+}
+
+.btn-grad1:hover {
+  transition: all 0.4s ease-in-out !important;
+  transform: scale(1.05);
+  background: #8C52FF;
+}
+
+
+.btn-grad2 {
+  color: #8C52FF;
+  height: 50px;
+  border: 1px solid #8C52FF;
+  transition: none !important;
+  background: transparent;
+  align-items: center;
+
+}
+
+.btn-grad2:hover {
+  transition: all 0.4s ease-in-out !important;
+  transform: scale(1.05);
+  background: transparent;
+  color: #8C52FF;
+}
+
+
 .btn-green {
   color: #ffffff;
   border: none !important;
