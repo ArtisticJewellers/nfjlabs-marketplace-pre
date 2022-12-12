@@ -9,6 +9,8 @@ import { truncateAddress } from "../../../utils/utility";
 import { useLazyQuery } from "@apollo/client";
 import { GetNftsOfUser, UserDetails } from "../../../graphql/query";
 import { ChainsInfo } from "../../../config/config-chains";
+import { MdVerified } from "react-icons/md";
+
 const Profile = () => {
   useDocumentTitle("NFJ Labs-Marketplace");
   const [creatorData, setCreatorData] = useState([]);
@@ -76,7 +78,12 @@ const HeroProfile = ({ address, creatorData }) => {
                       alt="avatar"
                     />
                   </div>
-                  <h5>@{creatorData?.username}</h5>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <h5>@{creatorData?.username}</h5>
+                    {creatorData?.isVerified && (
+                      <MdVerified color="#009eee" size={20} style={{ marginBottom: "10px", marginLeft: "10px" }} />
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="col-md-auto">
@@ -200,9 +207,8 @@ const CardProfile = ({ creatorData }) => {
 
                 <div className="card_head">
                   <Link
-                    to={`/item/${val.network}/${
-                      ChainsInfo[val.chainId].NFT_ADDRESS
-                    }/${val.tokenId}`}
+                    to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
+                      }/${val.tokenId}`}
                   >
                     <img alt="nftimage" src={val.imageUrl} />
                   </Link>
@@ -226,8 +232,7 @@ const CardProfile = ({ creatorData }) => {
                             Price:
                           </span>
                           <span
-                            className="
-                                         txt_sm"
+                            className="txt_sm"
                             style={{
                               color: "#000",
                               fontSize: "14px",

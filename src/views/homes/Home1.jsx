@@ -132,7 +132,7 @@ const Marketplace = () => {
                         freeMode={true}
                         modules={[Pagination]}
                         className="mySwiper"
-                        // style={{ padding: "40px 0" }}
+                      // style={{ padding: "40px 0" }}
                       >
                         <SwiperSlide>
                           <div
@@ -330,10 +330,10 @@ const FeaturedNfts = () => {
       <div>
         <Swiper
           slidesPerView={6}
-          spaceBetween={30}
+          spaceBetween={70}
           slidesPerGroup={6}
-          loop={true}
-          loopFillGroupWithBlank={true}
+          loop={false}
+          loopFillGroupWithBlank={false}
           pagination={{
             clickable: true,
           }}
@@ -363,10 +363,10 @@ const TrendingNfts = () => {
       <div>
         <Swiper
           slidesPerView={6}
-          spaceBetween={30}
+          spaceBetween={70}
           slidesPerGroup={6}
-          loop={true}
-          loopFillGroupWithBlank={true}
+          loop={false}
+          loopFillGroupWithBlank={false}
           pagination={{
             clickable: true,
           }}
@@ -395,10 +395,10 @@ const TopArtist = () => {
       <div>
         <Swiper
           slidesPerView={6}
-          spaceBetween={30}
+          spaceBetween={80}
           slidesPerGroup={6}
-          loop={true}
-          loopFillGroupWithBlank={true}
+          loop={false}
+          loopFillGroupWithBlank={false}
           pagination={{
             clickable: true,
           }}
@@ -433,11 +433,10 @@ const ArtistCard = ({ index, val }) => {
 
   return (
     <>
-      <div className="" key={index}>
+      <div key={index} style={{ width: "100%" }}>
         <div className="" style={{ cursor: "pointer" }}>
           <div
-            className="card__item 
- "
+            className="card__item"
             style={{ padding: "20px" }}
           >
             <div className="card_body space-y-10">
@@ -587,9 +586,8 @@ function NftCard({ val }) {
 
                 <div className="card_head">
                   <Link
-                    to={`/item/${val.network}/${
-                      ChainsInfo[val.chainId].NFT_ADDRESS
-                    }/${val.tokenId}`}
+                    to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
+                      }/${val.tokenId}`}
                   >
                     <img src={val.imageUrl} alt="nftimage" />
                   </Link>

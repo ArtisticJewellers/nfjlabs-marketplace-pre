@@ -104,8 +104,8 @@ const ItemDetails = () => {
     if (nftDetails?.getNftDetails?.chainId) {
       fetch(
         "https://cex.io/api/last_price/" +
-          ChainsInfo[nftDetails?.getNftDetails?.chainId]?.CURRENCY_SYMBOL +
-          "/USD"
+        ChainsInfo[nftDetails?.getNftDetails?.chainId]?.CURRENCY_SYMBOL +
+        "/USD"
       )
         .then((res) => res.json())
         .then((data) => {
@@ -436,7 +436,7 @@ const ItemDetails = () => {
                           placeholder={"0.0001 WMATIC"}
                           className="form-control"
                           type="number"
-                          // min={MIN_PRICE}
+                        // min={MIN_PRICE}
                         ></Input>
                       </Form.Item>{" "}
                       <Form.Item style={{ marginTop: "20px" }}>
@@ -493,7 +493,7 @@ const ItemDetails = () => {
                       if (active) {
                         if (
                           parseInt(auctionDetails.highestBid) /
-                            Math.pow(10, 18) <
+                          Math.pow(10, 18) <
                           parseFloat(value.price)
                         ) {
                           showLoading();
@@ -548,7 +548,7 @@ const ItemDetails = () => {
                           placeholder={"0.0001 WMATIC"}
                           className="form-control"
                           type="number"
-                          // min={MIN_PRICE}
+                        // min={MIN_PRICE}
                         ></Input>
                       </Form.Item>{" "}
                       <Form.Item style={{ marginTop: "20px" }}>
@@ -645,18 +645,18 @@ const ItemDetails = () => {
                         <li className="d-flex justify-content-between mr-4">
                           <div>IPFS: </div>
                           <a
-                            href={getIPFSLink(metaData?.ipfsLink)}
+                            href={`${metaData?.external_link}`}
                             target="_blank"
                             alt="IPFS"
                           >
-                            httt://ipfs.com/{metaData?.title}
+                            https://ipfs.com/{metaData?.title}
                           </a>
                         </li>
                         <li className="d-flex justify-content-between mr-4">
                           <div>Contract Address: </div>
                           <a
                             href="/"
-                            // href={`${blockchainURL}/address/${ChainsInfo[chainId]?.NFT_ADDRESS}`}
+                            // href={`${blockchainURL}/address/${address}`}
                             target="_blank"
                           >
                             {truncateAddress(address)}
@@ -667,7 +667,6 @@ const ItemDetails = () => {
                           <a
                             href="/"
                             // href={`${blockchainURL}/token/${ChainsInfo[chainId]?.NFT_ADDRESS}?a=${tokenId}#inventory`}
-
                             target="_blank"
                           >
                             {tokenId}
@@ -710,7 +709,7 @@ const ItemDetails = () => {
                       >
                         {auctionDetails.started &&
                           decimalToInt(auctionDetails.highestBid).toFixed(4) +
-                            " "}
+                          " "}
                         {ChainsInfo[getNetworkChainID(network)].CURRENCY_SYMBOL}
                       </span>
                       <br />
@@ -724,7 +723,7 @@ const ItemDetails = () => {
                         $
                         {auctionDetails.started &&
                           decimalToInt(auctionDetails.highestBid).toFixed(4) *
-                            UsdPrice.toFixed(2)}{" "}
+                          UsdPrice.toFixed(2)}{" "}
                         USD
                       </span>
                     </p>
@@ -893,8 +892,8 @@ const ItemDetails = () => {
                     {nftDetails?.getNftDetails?.ownerAddress === account && (
                       <>
                         {saleDetails.forSale ||
-                        auctionDetails.started ||
-                        auctionDetails.ended ? (
+                          auctionDetails.started ||
+                          auctionDetails.ended ? (
                           saleDetails.forSale ? (
                             <span
                               onClick={() => {

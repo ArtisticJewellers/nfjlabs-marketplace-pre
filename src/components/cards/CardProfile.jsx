@@ -21,9 +21,8 @@ const CardProfile = ({ creatorData }) => {
 
                 <div className="card_head">
                   <Link
-                    to={`/item/${val.network}/${
-                      ChainsInfo[val.chainId].NFT_ADDRESS
-                    }/${val.tokenId}`}
+                    to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
+                      }/${val.tokenId}`}
                   >
                     <img src={val.imageUrl} alt="nftimage" />
                   </Link>
@@ -55,14 +54,14 @@ const CardProfile = ({ creatorData }) => {
                             Price:
                           </span>
                           <span
-                            className="
-                                         txt_sm"
+                            className="txt_sm"
                             style={{
                               color: "#000",
                               fontSize: "14px",
                             }}
                           >
                             {val.price}{" "}
+                            {ChainsInfo[val.chainId].CURRENCY_SYMBOL}
                           </span>
                         </p>
                       </div>

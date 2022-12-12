@@ -13228,14 +13228,14 @@ a.btn-outline.disabled:hover {
 .btn-grad1:hover {
   transition: all 0.4s ease-in-out !important;
   transform: scale(1.05);
-  background: #8C52FF;
+  background: #5f11fc;
 }
 
 
 .btn-grad2 {
   color: #8C52FF;
   height: 50px;
-  border: 1px solid #8C52FF;
+  border: 2px solid #8C52FF !important;
   transition: none !important;
   background: transparent;
   align-items: center;
@@ -16505,7 +16505,13 @@ select {
 .hero__1 {
   overflow: hidden;
   position: relative;
-  background: #ffffff;
+  /* background: #ffffff; */
+  background: url("./assets/nfj.png");
+  /* background-image: url("./assets/stone.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* opacity: 80%; */
+  background-blend-mode: darken;
   box-shadow: 0px 17px 13px 0px #192c4b05;
   z-index: 0;
   position: relative;

@@ -24,10 +24,12 @@ const HeroProfile = ({ userProfile }) => {
                       alt="avatar"
                     />
                   </div>
-                  <h5>@{userProfile?.username}</h5>{" "}
-                  {userProfile?.isVerified && (
-                    <MdVerified color="#009eee" size={20} />
-                  )}
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <h5>@{userProfile?.username}</h5>{" "}
+                    {userProfile?.isVerified && (
+                      <MdVerified color="#009eee" size={20} style={{ marginBottom: "10px", marginLeft: "10px" }} />
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="col-md-auto">

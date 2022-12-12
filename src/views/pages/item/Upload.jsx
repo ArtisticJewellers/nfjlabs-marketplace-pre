@@ -32,6 +32,19 @@ const UploadComponent = () => {
   const { showLoading, hideLoading } = useLoading();
   const { checkVerification, isVerify } = useWalletValidation();
   const [createNft] = useMutation(CreateNft);
+
+  let exampleName = "Polygon";
+  if (chainId == "5" || chainId == "1") {
+    exampleName = "Ethereum";
+  }
+  else if (chainId == "97" || chainId == "56") {
+    exampleName = "Binance";
+  }
+  else {
+    exampleName = "Polygon";
+  }
+
+
   useEffect(() => {
     if (active) {
       console.log(isVerify);
@@ -267,7 +280,7 @@ const UploadComponent = () => {
                           <span className="nameInput">Network</span>
                           <input
                             type="text"
-                            placeholder="e.g: Binance"
+                            placeholder={exampleName}
                             disabled={true}
                             required={true}
                             className="form-control"
