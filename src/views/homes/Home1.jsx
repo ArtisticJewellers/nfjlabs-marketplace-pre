@@ -125,15 +125,14 @@ const Marketplace = () => {
                       style={{ height: "300px" }}
                     >
                       <Swiper
-                        slidesPerView={2}
+                        slidesPerView={3}
                         spaceBetween={30}
-                        pagination={{
-                          clickable: true,
-                        }}
-                        autoplay={true}
+                        autoplay={50}
+                        speed={800}
+                        freeMode={true}
                         modules={[Pagination]}
                         className="mySwiper"
-                        style={{ padding: "40px 0" }}
+                        // style={{ padding: "40px 0" }}
                       >
                         <SwiperSlide>
                           <div
@@ -142,7 +141,7 @@ const Marketplace = () => {
                               display: "flex",
                               justifyContent: "end",
                               width: "100%",
-                              height: "100%"
+                              height: "100%",
                             }}
                           >
                             <img
@@ -161,7 +160,7 @@ const Marketplace = () => {
                               display: "flex",
                               justifyContent: "end",
                               width: "100%",
-                              height: "100%"
+                              height: "100%",
                             }}
                           >
                             <img
@@ -180,7 +179,7 @@ const Marketplace = () => {
                               display: "flex",
                               justifyContent: "end",
                               width: "100%",
-                              height: "100%"
+                              height: "100%",
                             }}
                           >
                             <img
@@ -199,7 +198,7 @@ const Marketplace = () => {
                               display: "flex",
                               justifyContent: "end",
                               width: "100%",
-                              height: "100%"
+                              height: "100%",
                             }}
                           >
                             <img
@@ -218,7 +217,7 @@ const Marketplace = () => {
                               display: "flex",
                               justifyContent: "end",
                               width: "100%",
-                              height: "100%"
+                              height: "100%",
                             }}
                           >
                             <img
@@ -588,8 +587,9 @@ function NftCard({ val }) {
 
                 <div className="card_head">
                   <Link
-                    to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
-                      }/${val.tokenId}`}
+                    to={`/item/${val.network}/${
+                      ChainsInfo[val.chainId].NFT_ADDRESS
+                    }/${val.tokenId}`}
                   >
                     <img src={val.imageUrl} alt="nftimage" />
                   </Link>
@@ -637,43 +637,46 @@ function NftCard({ val }) {
                       </div>
                       <div>
                         <div
-                          className="py-2 d-flex gap-2"
+                          className="py-2  gap-2"
                           style={{ alignItems: "center" }}
                         >
-                          <div>
+                          <div
+                            style={{ display: "flex", justifyContent: "end" }}
+                          >
                             <img
                               src={userInfo?.signIn?.user?.avatar_url}
                               alt=""
-                              width="40px"
-                              height="40px"
                               style={{
-                                borderRadius: "9999px",
+                                borderRadius: "100%",
+                                width: "20%",
+                                height: "20%",
+                                marginRight: "12px",
                                 objectFit: "cover",
                               }}
                             ></img>
-                          </div>
 
-                          <Link to={"/profile/" + val.ownerAddress}>
-                            <div>
-                              <div
-                                style={{
-                                  color: "#000",
-                                  fontSize: "12px",
-                                  fontWeight: "bold",
-                                }}
-                              >
-                                Artist
+                            <Link to={"/profile/" + val.ownerAddress}>
+                              <div>
+                                <div
+                                  style={{
+                                    color: "#000",
+                                    fontSize: "12px",
+                                    fontWeight: "bold",
+                                  }}
+                                >
+                                  Artist
+                                </div>
+                                <div
+                                  style={{
+                                    color: "#000",
+                                    fontSize: "10px",
+                                  }}
+                                >
+                                  @{userInfo?.signIn?.user?.username}
+                                </div>
                               </div>
-                              <div
-                                style={{
-                                  color: "#000",
-                                  fontSize: "10px",
-                                }}
-                              >
-                                @{userInfo?.signIn?.user?.username}
-                              </div>
-                            </div>
-                          </Link>
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>
