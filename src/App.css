@@ -21830,8 +21830,21 @@ select {
   width: 20rem !important;
 }
 
+.switchNetwork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 30px;
+
+}
+
 @media only screen and (max-width: 700px) {
   .mobileGayab {
+    display: none;
+  }
+
+  .switchNetwork {
     display: none;
   }
 }

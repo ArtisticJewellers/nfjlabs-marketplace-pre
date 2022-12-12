@@ -682,8 +682,8 @@ function NftCard({ val }) {
                               alt=""
                               style={{
                                 borderRadius: "100%",
-                                width: "20%",
-                                height: "20%",
+                                width: "44px",
+                                height: "42px",
                                 marginRight: "12px",
                                 objectFit: "cover",
                               }}

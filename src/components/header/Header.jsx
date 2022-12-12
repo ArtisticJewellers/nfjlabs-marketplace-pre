@@ -249,15 +249,7 @@ const Header = () => {
 
             <div className="d-flex" style={{ alignItems: "center", gap: 15 }}>
               {active ? (
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    cursor: "pointer",
-                    marginRight: "30px",
-                  }}
-                >
+                <div className="switchNetwork" >
                   <SwitchNetwork
                     url={
                       icons[chainId]?.icon ||
