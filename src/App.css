@@ -13209,7 +13209,7 @@ a.btn-outline.disabled:hover {
   border: none !important;
   /* border: solid 2px #5691fe;   transition: all 0.4s ease-in-out !important;
        */
-  color: #fff !important;
+  color: rgb(0, 0, 0) !important;
   border: 2px solid #8C52FF !important;
   /* border: 2px solid #e20ef9 !important; */
 }
