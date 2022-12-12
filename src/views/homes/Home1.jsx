@@ -246,9 +246,9 @@ const Marketplace = () => {
         >
           <div>
             <div className=" py-2 " style={{ margin: "0 30px" }}>
-              <h3 style={{ color: "#8C52FF" }}>Trending NFTs</h3>
+              <h3 style={{ color: "#8C52FF" }}>Trending Jewellery</h3>
               <p style={{ color: "white", marginBottom: "16px" }}>
-                These are some of the most trending nfts on our NFJ marketplace.
+                These are some of the most trending jewellery nfts on our NFJ marketplace.
               </p>
             </div>
           </div>
@@ -299,10 +299,9 @@ const Marketplace = () => {
         >
           <div>
             <div className="py-2 mb-2" style={{ margin: "0 30px" }}>
-              <h3 style={{ color: "#8C52FF" }}>Featured NFTs</h3>
+              <h3 style={{ color: "#8C52FF" }}>Featured Gems</h3>
               <p style={{ color: "white" }}>
-                These are some of the most trending collections on our NFJ
-                marketplace.
+                Top quality gems are featured on NFJ Marketplace
               </p>
             </div>
           </div>
@@ -517,48 +516,85 @@ const ArtistCard = ({ index, val }) => {
                     followers
                   </span>
                 </div>
-                <div
-                  onClick={() => {
-                    if (active) {
-                      followUser({
-                        variables: {
-                          followId: val?._id,
-                          userId: userInfo?.user?._id,
-                        },
-                        refetchQueries: [
-                          {
-                            query: GetPopularCreators,
-                            variables: {
-                              popularCollection: "top_creators",
-                            },
+                {val.follower_list.filter(
+                  (e) => e._id === userInfo?.user?._id
+                ).length > 0
+                  ? (<div
+                    onClick={() => {
+                      if (active) {
+                        followUser({
+                          variables: {
+                            followId: val?._id,
+                            userId: userInfo?.user?._id,
                           },
-                          {
-                            query: UserDetails,
-                            variables: {
-                              walletAddress: account,
+                          refetchQueries: [
+                            {
+                              query: GetPopularCreators,
+                              variables: {
+                                popularCollection: "top_creators",
+                              },
                             },
+                            {
+                              query: UserDetails,
+                              variables: {
+                                walletAddress: account,
+                              },
+                            },
+                          ],
+                        }).then((res) => console.log(res.data));
+                      } else {
+                        WALLET_ALERT();
+                      }
+                    }}
+                    className="btn-grad btn-border "
+                    style={{
+                      width: "100%",
+                      borderRadius: "10px",
+                      padding: "10px",
+                      background: "#f2edf0",
+                      border: "1px solid #8C52FF !important",
+                      color: "black"
+                    }}
+                  >
+                    UnFollow
+                  </div>)
+                  : (<div
+                    onClick={() => {
+                      if (active) {
+                        followUser({
+                          variables: {
+                            followId: val?._id,
+                            userId: userInfo?.user?._id,
                           },
-                        ],
-                      }).then((res) => console.log(res.data));
-                    } else {
-                      WALLET_ALERT();
-                    }
-                  }}
-                  className="btn-grad btn-border "
-                  style={{
-                    width: "100%",
-                    borderRadius: "10px",
-                    padding: "10px",
-                    background: "#0a64bc",
-                  }}
-                >
-                  {console.log(val.follower_list)}
-                  {val.follower_list.filter(
-                    (e) => e._id === userInfo?.user?._id
-                  ).length > 0
-                    ? "Unfollow"
-                    : "Follow"}
-                </div>
+                          refetchQueries: [
+                            {
+                              query: GetPopularCreators,
+                              variables: {
+                                popularCollection: "top_creators",
+                              },
+                            },
+                            {
+                              query: UserDetails,
+                              variables: {
+                                walletAddress: account,
+                              },
+                            },
+                          ],
+                        }).then((res) => console.log(res.data));
+                      } else {
+                        WALLET_ALERT();
+                      }
+                    }}
+                    className="btn-grad btn-border "
+                    style={{
+                      width: "100%",
+                      borderRadius: "10px",
+                      padding: "10px",
+                      background: "#0a64bc",
+                    }}
+                  >
+                    Follow
+                  </div>)}
               </div>
             </div>
           </div>

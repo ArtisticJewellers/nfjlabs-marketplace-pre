@@ -21,9 +21,8 @@ function CardMarketplace({ FilterData }) {
 
                     <div className="card_head">
                       <Link
-                        to={`/item/${val.network}/${
-                          ChainsInfo[val.chainId].NFT_ADDRESS
-                        }/${val.tokenId}`}
+                        to={`/item/${val.network}/${ChainsInfo[val.chainId].NFT_ADDRESS
+                          }/${val.tokenId}`}
                       >
                         <img src={val.imageUrl} alt="nftimage" />
                       </Link>

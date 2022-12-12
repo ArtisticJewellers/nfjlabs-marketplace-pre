@@ -139,6 +139,8 @@ const ItemDetails = () => {
       setAllBiddres(data);
     });
   }, []);
+
+
   const TabPanelFrom = ({ metaData }) => {
     return (
       <>
@@ -146,46 +148,8 @@ const ItemDetails = () => {
           defaultActiveKey="1"
           items={[
             {
-              label: `Offers`,
-              key: "1",
-              children: `No Offers`,
-            },
-            {
-              label: `History`,
-              key: "2",
-              children: (
-                <>
-                  <div>
-                    <div className="d-flex  align-center my-4">
-                      <div className="ml-2">
-                        {getNftTrans?.getNftTrans?.map((val, i) => (
-                          <div key={i} className="mt-2">
-                            <span style={{ fontWeight: "bold" }}>
-                              {TransStatus[val.transactionType]}{" "}
-                            </span>
-                            by{" "}
-                            <a href="/" target="_blank" rel="noreferrer">
-                              <span style={{ fontWeight: "bold" }}>
-                                <img
-                                  src={val.buyerId.avatar_url}
-                                  width="40px"
-                                  height="40px"
-                                  style={{ borderRadius: "999px" }}
-                                />{" "}
-                                {val.buyerId.username}
-                              </span>
-                            </a>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </>
-              ),
-            },
-            {
               label: `Properties`,
-              key: "3",
+              key: "1",
               children: (
                 <>
                   <div>
@@ -224,6 +188,44 @@ const ItemDetails = () => {
                 </>
               ),
             },
+            {
+              label: `History`,
+              key: "2",
+              children: (
+                <>
+                  <div>
+                    <div className="d-flex  align-center my-4">
+                      <div className="ml-2">
+                        {getNftTrans?.getNftTrans?.map((val, i) => (
+                          <div key={i} className="mt-2">
+                            <span style={{ fontWeight: "bold" }}>
+                              {TransStatus[val.transactionType]}{" "}
+                            </span>
+                            by{" "}
+                            {/* <a href="/" target="_blank" rel="noreferrer">
+                              <span style={{ fontWeight: "bold" }}>
+                                <img
+                                  src={val.buyerId.avatar_url}
+                                  width="40px"
+                                  height="40px"
+                                  style={{ borderRadius: "999px" }}
+                                />{" "}
+                                {val.buyerId.username}
+                              </span>
+                            </a> */}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ),
+            },
+            {
+              label: `Offers`,
+              key: "3",
+              children: `No Offers`,
+            }
           ]}
         />
       </>
@@ -846,7 +848,7 @@ const ItemDetails = () => {
                               className="avatars_name color_black"
                               style={{ margin: 0 }}
                             >
-                              Creator
+                              Artist
                             </p>
                             <p
                               className="avatars_name"

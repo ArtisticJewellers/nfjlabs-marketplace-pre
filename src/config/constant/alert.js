@@ -24,8 +24,8 @@ export const VERIFY_ALERT = () =>
 
 export const MINT_ALERT = () =>
   Swal.fire(
-    "NFT create successfully",
-    "Check your nft on profile section ",
+    "NFT minted successfully",
+    "You can see your minted NFT in your profile after it gets approved by admin",
     "success"
   );
 
@@ -58,14 +58,14 @@ export const REMOVE_AUCTION_ALERT = () =>
 export const PUT_AUCTION_ALERT = () =>
   Swal.fire(
     "Transaction successfully",
-    "Your NFT is successfully put on marketplace.",
+    "Your NFT is successfully listed on marketplace.",
     "success"
   );
 
 export const BUY_NFT_ALERT = () =>
   Swal.fire(
     "Transaction successfully",
-    "Check your nft on profile section ",
+    "Check your nft on your profile section ",
     "success"
   );
 

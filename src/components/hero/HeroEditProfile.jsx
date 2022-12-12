@@ -21,7 +21,7 @@ const HeroEditProfile = ({ data }) => {
           <img
             src={
               data?.bg_image ||
-              "https://raroin.creabik.com/assets/img/bg/cover.jpg"
+              "https://nfjlabs.com/nfj.png"
             }
             alt="cover"
           />
