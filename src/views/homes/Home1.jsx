@@ -30,6 +30,8 @@ import { useWeb3React } from "@web3-react/core";
 import { ChainsInfo } from "../../config/config-chains";
 import Navbar from "../../components/header/Navbar/Navbar";
 import Typewriter from "typewriter-effect";
+import dolcering from "../../assets/nfts/dolce.gif"
+// import treenft from "../../assets/nfts/tol.mp4"
 
 const Marketplace = () => {
   const { data: banner_nft } = useQuery(BannerNft, {
@@ -93,6 +95,7 @@ const Marketplace = () => {
                             to={"explore"}
                             className="btn btn-grad2 btn-border"
                             rel="noreferrer"
+                            style={{ margin: "0 15px" }}
                           >
                             Gems <i class="ri-arrow-right-s-line"></i>
                           </Link>
@@ -120,7 +123,8 @@ const Marketplace = () => {
                         </div>
                       </div>
                     </div>
-                    <div
+                    {/* old swiper  */}
+                    {/* <div
                       className="col-lg-6 align-items-center"
                       style={{ height: "300px" }}
                     >
@@ -230,6 +234,124 @@ const Marketplace = () => {
                           </div>
                         </SwiperSlide>
                       </Swiper>
+                    </div> */}
+                    <div className="col-lg-6 align-items-center" style={{ height: "300px", width: "700px" }}>
+                      {/* new animated failed swiper  */}
+                      {/* <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        autoplay={50}
+                        speed={800}
+                        freeMode={true}
+                        direction={"vertical"}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                        style={{ width: "600px", height: "400px" }}
+                      >
+                        <SwiperSlide>
+                          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", marginLeft: "80px" }}>
+                            <div style={{ width: "50%" }}>
+                              <div className="img1Div">
+                                <Link to={"explore"}>
+                                  <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                                </Link>
+                                <div className="hidden1Div">
+                                  <h2>Vincezaro</h2>
+                                  <span>NFT #23</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div style={{ width: "50%" }}>
+                              <div className="img2Div">
+                                <Link to={"explore"}>
+                                  <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                                </Link>
+                                <div className="hidden2Div">
+                                  <h2>Vincezaro</h2>
+                                  <span>NFT #23</span>
+                                </div>
+                              </div>
+                              <div className="img3Div">
+                                <Link to={"explore"}>
+                                  <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                                </Link>
+                                <div className="hidden3Div">
+                                  <h2>Vincezaro</h2>
+                                  <span>NFT #23</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", marginLeft: "80px" }}>
+                            <div style={{ width: "50%" }}>
+                              <div className="img1Div">
+                                <Link to={"explore"}>
+                                  <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                                </Link>
+                                <div className="hidden1Div">
+                                  <h2>Vincezaro</h2>
+                                  <span>NFT #23</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div style={{ width: "50%" }}>
+                              <div className="img2Div">
+                                <Link to={"explore"}>
+                                  <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                                </Link>
+                                <div className="hidden2Div">
+                                  <h2>Vincezaro</h2>
+                                  <span>NFT #23</span>
+                                </div>
+                              </div>
+                              <div className="img3Div">
+                                <Link to={"explore"}>
+                                  <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                                </Link>
+                                <div className="hidden3Div">
+                                  <h2>Vincezaro</h2>
+                                  <span>NFT #23</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                      </Swiper> */}
+                      <div className="mainHeroDiv">
+                        <div className="mainImg1Div">
+                          <div className="img1Div">
+                            <Link to={"explore"}>
+                              <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                            </Link>
+                            <div className="hidden1Div">
+                              <h2>Vincezaro <MdVerified color="#009eee" size={20} /></h2>
+                              <span>NFT #23</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div style={{ width: "50%" }} className="mobileViewGayab">
+                          <div className="img2Div">
+                            <Link to={"explore"}>
+                              <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                            </Link>
+                            <div className="hidden2Div">
+                              <h2>Vincezaro <MdVerified color="#009eee" size={15} /></h2>
+                              <span>NFT #23</span>
+                            </div>
+                          </div>
+                          <div className="img3Div">
+                            <Link to={"explore"}>
+                              <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                            </Link>
+                            <div className="hidden3Div">
+                              <h2>Vincezaro <MdVerified color="#009eee" size={15} /></h2>
+                              <span>NFT #23</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

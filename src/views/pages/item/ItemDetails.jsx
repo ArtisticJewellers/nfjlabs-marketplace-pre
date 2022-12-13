@@ -202,17 +202,17 @@ const ItemDetails = () => {
                               {TransStatus[val.transactionType]}{" "}
                             </span>
                             by{" "}
-                            {/* <a href="/" target="_blank" rel="noreferrer">
+                            <a href="/" target="_blank" rel="noreferrer">
                               <span style={{ fontWeight: "bold" }}>
                                 <img
-                                  src={val.buyerId.avatar_url}
+                                  src={val?.buyerId?.avatar_url}
                                   width="40px"
                                   height="40px"
                                   style={{ borderRadius: "999px" }}
                                 />{" "}
-                                {val.buyerId.username}
+                                {val?.buyerId?.username}
                               </span>
-                            </a> */}
+                            </a>
                           </div>
                         ))}
                       </div>
