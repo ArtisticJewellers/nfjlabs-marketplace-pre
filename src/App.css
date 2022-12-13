@@ -21954,3 +21954,19 @@ select {
     display: none;
   }
 }
+
+.explorePage {
+  width: 1500px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .explorePage {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .explorePage {
+    width: 100%;
+  }
+}

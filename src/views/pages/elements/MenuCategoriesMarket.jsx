@@ -91,7 +91,6 @@ function MenuCategoriesMarket() {
                           <div className="row justify-content-between align-items-center">
                             <div className="col-lg-auto"></div>
                           </div>
-
                           <CardMarketplace FilterData={data} />
                         </Tabs>
                       </div>

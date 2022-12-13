@@ -30,8 +30,9 @@ import { useWeb3React } from "@web3-react/core";
 import { ChainsInfo } from "../../config/config-chains";
 import Navbar from "../../components/header/Navbar/Navbar";
 import Typewriter from "typewriter-effect";
-import dolcering from "../../assets/nfts/dolce.gif"
-// import treenft from "../../assets/nfts/tol.mp4"
+import jhumka from "../../assets/nfts/jhumka.gif"
+import dolce from "../../assets/nfts/alessio/dolce.gif"
+import ring2 from "../../assets/nfts/ring2.gif"
 
 const Marketplace = () => {
   const { data: banner_nft } = useQuery(BannerNft, {
@@ -322,8 +323,8 @@ const Marketplace = () => {
                       <div className="mainHeroDiv">
                         <div className="mainImg1Div">
                           <div className="img1Div">
-                            <Link to={"explore"}>
-                              <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                            <Link to={"item/binance/0x625437f22363eaEfB7B602B300a388A802C189EF/15"}>
+                              <img src={jhumka} alt="image1hero" className="ImageStyles" />
                             </Link>
                             <div className="hidden1Div">
                               <h2>Vincezaro <MdVerified color="#009eee" size={20} /></h2>
@@ -334,16 +335,16 @@ const Marketplace = () => {
                         <div style={{ width: "50%" }} className="mobileViewGayab">
                           <div className="img2Div">
                             <Link to={"explore"}>
-                              <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                              <img src={dolce} alt="image1hero" className="ImageStyles" />
                             </Link>
                             <div className="hidden2Div">
-                              <h2>Vincezaro <MdVerified color="#009eee" size={15} /></h2>
-                              <span>NFT #23</span>
+                              <h2>@Aleesio.B <MdVerified color="#009eee" size={15} /></h2>
+                              <span>Dolce Vita</span>
                             </div>
                           </div>
                           <div className="img3Div">
                             <Link to={"explore"}>
-                              <img src={dolcering} alt="image1hero" className="ImageStyles" />
+                              <img src={ring2} alt="image1hero" className="ImageStyles" />
                             </Link>
                             <div className="hidden3Div">
                               <h2>Vincezaro <MdVerified color="#009eee" size={15} /></h2>

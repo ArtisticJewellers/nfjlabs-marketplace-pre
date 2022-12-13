@@ -119,14 +119,14 @@ body {
 
 .hidden2Div h2 {
   font-size: 13px;
-  color: white;
+  color: black;
   font-weight: bold;
   margin-bottom: -7px;
 }
 
 .hidden2Div span {
   font-size: 8px;
-  color: white;
+  color: black;
 }
 
 /* div 3 */
@@ -139,14 +139,14 @@ body {
 
 .hidden3Div h2 {
   font-size: 13px;
-  color: white;
+  color: black;
   font-weight: bold;
   margin-bottom: -7px;
 }
 
 .hidden3Div span {
   font-size: 8px;
-  color: white;
+  color: black;
 }
 
 .mainImg1Div {

@@ -65,8 +65,7 @@ function CardMarketCategory({ category }) {
                             <p className="txt_sm">
                               Price:
                               <span
-                                className="color_green
-                                           txt_sm"
+                                className="color_green txt_sm"
                               >
                                 {val.price} ETH
                               </span>
@@ -74,12 +73,7 @@ function CardMarketCategory({ category }) {
                           </Link>
                         </div>
                         {/* <div className="hr" /> */}
-                        <div
-                          className="d-flex
-           align-items-center
-           space-x-10
-           justify-content-between"
-                        >
+                        <div className="d-flex align-items-center space-x-10 justify-content-between">
                           <Link>
                             <div className="btn btn-sm btn-primary btn-grad">
                               Buy NFT

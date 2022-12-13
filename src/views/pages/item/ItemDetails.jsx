@@ -69,6 +69,26 @@ const ItemDetails = () => {
     getAllBidders,
   } = useNFT();
 
+  let blockURL = "";
+  if (ChainsInfo[getNetworkChainID(network)].CHAIN_ID == 1) {
+    blockURL = "https://etherscan.io/";
+  }
+  else if (ChainsInfo[getNetworkChainID(network)].CHAIN_ID == 137) {
+    blockURL = "https://polygonscan.com/";
+  }
+  else if (ChainsInfo[getNetworkChainID(network)].CHAIN_ID == 80001) {
+    blockURL = "https://mumbai.polygonscan.com/";
+  }
+  else if (ChainsInfo[getNetworkChainID(network)].CHAIN_ID == 5) {
+    blockURL = "https://goerli.etherscan.io/";
+  }
+  else if (ChainsInfo[getNetworkChainID(network)].CHAIN_ID == 97) {
+    blockURL = "https://testnet.bscscan.com/";
+  }
+  else {
+    blockURL = "https://bscscan.com/";
+  }
+
   const { downloadJSONOnIpfs } = useStorage();
   const [metaData, setMetaData] = useState({});
   const { account, active } = useWeb3React();
@@ -645,11 +665,11 @@ const ItemDetails = () => {
                         }}
                       >
                         <li className="d-flex justify-content-between mr-4">
-                          <div>IPFS: </div>
+                          <div>Metadata: </div>
                           <a
-                            href={`${metaData?.external_link}`}
+                            href={getIPFSLink(metaData?.ipfsLink)}
                             target="_blank"
-                            alt="IPFS"
+                            alt="metadata"
                           >
                             https://ipfs.com/{metaData?.title}
                           </a>
@@ -657,8 +677,7 @@ const ItemDetails = () => {
                         <li className="d-flex justify-content-between mr-4">
                           <div>Contract Address: </div>
                           <a
-                            href="/"
-                            // href={`${blockchainURL}/address/${address}`}
+                            href={`${blockURL}address/${address}`}
                             target="_blank"
                           >
                             {truncateAddress(address)}
@@ -667,8 +686,7 @@ const ItemDetails = () => {
                         <li className="d-flex justify-content-between mr-4">
                           <div>TokenID: </div>
                           <a
-                            href="/"
-                            // href={`${blockchainURL}/token/${ChainsInfo[chainId]?.NFT_ADDRESS}?a=${tokenId}#inventory`}
+                            href={`${blockURL}token/${address}?a=${tokenId}`}
                             target="_blank"
                           >
                             {tokenId}
@@ -680,6 +698,10 @@ const ItemDetails = () => {
                         <li className="d-flex justify-content-between mr-4">
                           <div>Blockchain:</div>
                           <span className="capitalize">{network}</span>{" "}
+                        </li>
+                        <li className="d-flex justify-content-between mr-4">
+                          <div>Royalty:</div>
+                          <span className="capitalize">5%</span>{" "}
                         </li>
                       </ul>
                     </div>
@@ -862,10 +884,10 @@ const ItemDetails = () => {
                     </div>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <div>
+                    <div style={{ display: "flex" }}>
                       <a
                         target="_blank"
-                        href={getIPFSLink(metaData?.ipfsLink)}
+                        href={`${metaData?.external_link}`}
                         rel="noreferrer"
                         style={{
                           border: "1px solid black",
@@ -874,6 +896,7 @@ const ItemDetails = () => {
                           display: "flex",
                           gap: "10px",
                           alignItems: "center",
+                          marginRight: "30px"
                         }}
                       >
                         <div>
@@ -890,7 +913,35 @@ const ItemDetails = () => {
                           View On IPFS
                         </div>
                       </a>
+
+                      {/* <a
+                        target="_blank"
+                        href={`${metaData?.unlock}`}
+                        rel="noreferrer"
+                        style={{
+                          border: "1px solid black",
+                          padding: "8px 20px",
+                          borderRadius: "999px",
+                          display: "flex",
+                          gap: "10px",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div>
+                          <img
+                            width={30}
+                            src={"https://gateway.ipfscdn.io/ipfs/QmUHyyLR4m29GRM1Sjgrx9FgtiMucgUsKZRCfruDByYeC4/pdf-file.png"}
+                            alt="dashghg"
+                          />
+                        </div>
+                        <div style={{ fontBold: "10px", color: "black" }}>
+                          View Certificate
+                        </div>
+                      </a> */}
                     </div>
+
+                    {/* pdf Button  */}
+
                     {nftDetails?.getNftDetails?.ownerAddress === account && (
                       <>
                         {saleDetails.forSale ||

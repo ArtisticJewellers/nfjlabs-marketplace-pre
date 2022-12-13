@@ -6,7 +6,7 @@ import { ChainsInfo } from "../../config/config-chains";
 function CardMarketplace({ FilterData }) {
   return (
     <div>
-      <div className="row mb-30_reset">
+      <div className="row mb-30_reset explorePage">
         {FilterData?.filterNfts?.map((val, i) => (
           <>
             {val.isApproved && (
